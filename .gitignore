@@ -31,3 +31,16 @@ Temporary Items
 .crt
 .csr
 .pem
+
+#Project specific
+
+*.pyc
+venv/
+*.tfvars
+.idea**
+**test**
+**oci-devops-node**
+oci_pulumi_nodejs_local*
+.random.txt
+generated/**
+**generated

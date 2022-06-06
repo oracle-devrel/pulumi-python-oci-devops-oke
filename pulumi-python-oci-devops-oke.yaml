@@ -1,0 +1,91 @@
+config:
+  oci:region: us-ashburn-1
+  pulumi-python-oci-devops-oke:app_name_prefix: pulumi_devops
+  pulumi-python-oci-devops-oke:autobuild_run: "True"
+  pulumi-python-oci-devops-oke:build_spec_file: build_spec.yaml
+  pulumi-python-oci-devops-oke:buildstage_branchname: main
+  pulumi-python-oci-devops-oke:buildstage_connection_type: DEVOPS_CODE_REPOSITORY
+  pulumi-python-oci-devops-oke:buildstage_description: Build your application.
+  pulumi-python-oci-devops-oke:buildstage_displayname: appbuild_stage
+  pulumi-python-oci-devops-oke:buildstage_image: OL7_X86_64_STANDARD_10
+  pulumi-python-oci-devops-oke:buildstage_sourcename: node_express
+  pulumi-python-oci-devops-oke:buildstage_stagetype: BUILD
+  pulumi-python-oci-devops-oke:compartment_ocid: ""
+  pulumi-python-oci-devops-oke:containerartifact_argumentsubstitutionmode: SUBSTITUTE_PLACEHOLDERS
+  pulumi-python-oci-devops-oke:containerartifact_artifacttype: DOCKER_IMAGE
+  pulumi-python-oci-devops-oke:containerartifact_displayname: pulumi_devops_containerrepo_artifact
+  pulumi-python-oci-devops-oke:containerartifact_sourcetype: OCIR
+  pulumi-python-oci-devops-oke:deploy_artifact_source_type: INLINE
+  pulumi-python-oci-devops-oke:deploypipeline_description: Pipeline to deploy to OKE
+    using devops and pulumi
+  pulumi-python-oci-devops-oke:deploypipeline_displayname: pulumi_devops_deploypipeline
+  pulumi-python-oci-devops-oke:deploypipeline_param_defaultvalue: ns-node
+  pulumi-python-oci-devops-oke:deploypipeline_param_description: A namespace for the
+    deployment
+  pulumi-python-oci-devops-oke:deploypipeline_param_name: namespace
+  pulumi-python-oci-devops-oke:deploystage_oke_description: Apply manifest to oke
+  pulumi-python-oci-devops-oke:deploystage_oke_name: Deploy-To-Oke
+  pulumi-python-oci-devops-oke:deploystage_oke_rollbackpolicy: AUTOMATED_STAGE_ROLLBACK_POLICY
+  pulumi-python-oci-devops-oke:deploystage_oke_type: OKE_DEPLOYMENT
+  pulumi-python-oci-devops-oke:devop_buildpipeline_description: Build for pulumi devops
+    with oke
+  pulumi-python-oci-devops-oke:devop_buildpipeline_name: pulumi_devops_oke
+  pulumi-python-oci-devops-oke:devops_coderepo_description: OCI Pulumi nodejs repo
+  pulumi-python-oci-devops-oke:devops_coderepo_name: oci_pulumi_nodejs
+  pulumi-python-oci-devops-oke:dg_description: Dynamic group to manage pulumi devops
+    with oke
+  pulumi-python-oci-devops-oke:dg_name: pulumi_devops_dg
+  pulumi-python-oci-devops-oke:github_clone_path: oci-devops-node-loc
+  pulumi-python-oci-devops-oke:github_url: https://github.com/oracle-quickstart/oci-devops-node.git
+  pulumi-python-oci-devops-oke:internetgateway_name: oke_internetgateway
+  pulumi-python-oci-devops-oke:kuberartifact_displayname: pulumi_devops_kubernetes_artifacts
+  pulumi-python-oci-devops-oke:kuberartifact_sourcetype: KUBERNETES_MANIFEST
+  pulumi-python-oci-devops-oke:kubernetes_version: v1.23.4
+  pulumi-python-oci-devops-oke:log_name: pulumi_devops_logs
+  pulumi-python-oci-devops-oke:log_retention_in_days: "30"
+  pulumi-python-oci-devops-oke:loggroup_description: sample log group
+  pulumi-python-oci-devops-oke:loggroup_name: pulumi_log_group
+  pulumi-python-oci-devops-oke:natgateway_name: oke_natgateway
+  pulumi-python-oci-devops-oke:notification_description: oci_pulumi_topic
+  pulumi-python-oci-devops-oke:notification_topic_name: topic_pulumi
+  pulumi-python-oci-devops-oke:oci_containerrepo_displayname: pulumi_oke_repo
+  pulumi-python-oci-devops-oke:oci_containerrepo_public: "True"
+  pulumi-python-oci-devops-oke:oci_devops_deploy_env_name: pulumi_devops_env_oke
+  pulumi-python-oci-devops-oke:oci_devops_deploy_env_type: OKE_CLUSTER
+  pulumi-python-oci-devops-oke:oci_devops_project_name: oci_pulumi_devops_project
+  pulumi-python-oci-devops-oke:oke_apiendpoint_seclist_name: oke_apiendpoint_seclist
+  pulumi-python-oci-devops-oke:oke_apisubnet_cidr: 10.0.0.0/28
+  pulumi-python-oci-devops-oke:oke_apisubnet_displayname: oke_apiendpoint_subnet
+  pulumi-python-oci-devops-oke:oke_cluster_name: pulumi-oke
+  pulumi-python-oci-devops-oke:oke_is_public_ip_enabled: "True"
+  pulumi-python-oci-devops-oke:oke_lbsubnet_cidr: 10.0.20.0/24
+  pulumi-python-oci-devops-oke:oke_lbsubnet_displayname: oke_svclb_subnet
+  pulumi-python-oci-devops-oke:oke_node_memory_in_gbs: "16"
+  pulumi-python-oci-devops-oke:oke_node_ocpus: "1"
+  pulumi-python-oci-devops-oke:oke_node_operating_system: Oracle Linux
+  pulumi-python-oci-devops-oke:oke_node_routetable_displayname: oke_node_routetable
+  pulumi-python-oci-devops-oke:oke_node_seclist_name: oke_node_seclist
+  pulumi-python-oci-devops-oke:oke_node_shape: VM.Standard.E4.Flex
+  pulumi-python-oci-devops-oke:oke_nodepool_name: oke_nodepool_1
+  pulumi-python-oci-devops-oke:oke_nodepool_node_count: "3"
+  pulumi-python-oci-devops-oke:oke_nodesubnet_cidr: 10.0.10.0/24
+  pulumi-python-oci-devops-oke:oke_nodesubnet_displayname: oke_node_subnet
+  pulumi-python-oci-devops-oke:oke_operating_system_version: "7.9"
+  pulumi-python-oci-devops-oke:oke_svclb_routetable_displayname: oke_svclb_routetable
+  pulumi-python-oci-devops-oke:oke_svclb_seclist_name: oke_svclb_seclist
+  pulumi-python-oci-devops-oke:policies_description: Pulumi devops oke policies
+  pulumi-python-oci-devops-oke:policies_name: pulumi_devops_policies
+  pulumi-python-oci-devops-oke:servicegateway_name: oke_servicegateway
+  pulumi-python-oci-devops-oke:tag_version: v0.0
+  pulumi-python-oci-devops-oke:trigerdeployment_description: |
+    Trigger the deployment pipeline
+  pulumi-python-oci-devops-oke:trigerdeployment_name: trigger-deployment
+  pulumi-python-oci-devops-oke:trigerdeployment_parseparamenabled: "True"
+  pulumi-python-oci-devops-oke:trigerdeployment_stagetype: TRIGGER_DEPLOYMENT_PIPELINE
+  pulumi-python-oci-devops-oke:uploadartifact_description: Upload container image
+  pulumi-python-oci-devops-oke:uploadartifact_displayname: upload-artifact
+  pulumi-python-oci-devops-oke:uploadartifact_source: output01
+  pulumi-python-oci-devops-oke:uploadartifact_stagetype: DELIVER_ARTIFACT
+  pulumi-python-oci-devops-oke:vcn_cidr_block: 10.0.0.0/16
+  pulumi-python-oci-devops-oke:vcn_display_name: pulumi_devops_vcn
+  pulumi-python-oci-devops-oke:vcn_dns_label: pulumidns
